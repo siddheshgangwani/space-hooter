@@ -46,6 +46,7 @@ mySprite = sprites.create(img`
 controller.moveSprite(mySprite)
 info.setScore(0)
 mySprite.setStayInScreen(true)
+info.startCountdown(20)
 game.onUpdateInterval(1000, function () {
     mySprite2 = sprites.createProjectileFromSide(img`
         . . . . . . . . . . . . . . . . 
@@ -65,5 +66,5 @@ game.onUpdateInterval(1000, function () {
         . . . . . . . . . . . . . . . . 
         . . . . . . . . . . . . . . . . 
         `, -50, randint(-25, 35))
-    mySprite.setFlag(SpriteFlag.AutoDestroy, false)
+    mySprite.setFlag(SpriteFlag.Invisible, true)
 })
